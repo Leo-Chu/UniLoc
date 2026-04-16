@@ -1,6 +1,6 @@
 # UniLoc — Training `main.py`
 
-This project trains a **LocalizationTransformer** (PyTorch Lightning) for indoor localization from Wi‑Fi features (CSI, RSSI, SNR, AP vectors). Training can run as a **single phase** or as a **multi-stage** schedule defined in the YAML config.
+This project introduces a new LocalizationTransformer  (with PyTorch Lightning) for indoor localization from Wi‑Fi features (CSI, RSSI, SNR, AP vectors).  A first-time work for small-size foundation model based on measurements.
 
 ## Prerequisites
 
@@ -114,18 +114,7 @@ Optionally pass **`--ckpt path/to/model.ckpt`** or **`--weights path/to/best_mod
 - **Logs & checkpoints:** `logging.log_dir` (default `./results/logs`), then `<experiment_name>/checkpoints/` with subfolders `stage1_cls`, `stage2_reg`, `stage3_ft` as applicable.
 - **TensorBoard:** Under the same log root; run names include stage tags (e.g. `*_stage1_cls`, `*_stage2_reg`, `*_stage3_ft`).
 
----
-
-## Troubleshooting
-
-- **`FileNotFoundError` for `training.pkl` / `eval.pkl` / `test.pkl`** — create `data/` (or set `data.data_dir`) and add the three pickle files.
-- **`No stage-1 checkpoint`** when running **stage 2** — run **`python main.py stage 1`** first, or run the full multi-stage command once.
-- **`stage 3` requires `two_stage.stage3` in YAML** — add a `stage3` block or disable `use_three_stage`.
-
-For exact loss weights, epochs, patience, and monitors, edit **`cfg/localization_config.yaml`** — the comments there mirror what `main.py` applies per stage.
-
----
-
+ 
 ## Other config files
 
 - **`cfg/config.yaml`** — Example config for a generic encoder–decoder-style transformer experiment. It is **not** wired into `main.py`. Use **`cfg/localization_config.yaml`** for this project.
