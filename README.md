@@ -1,4 +1,4 @@
-# UniLoc — Training `main.py`
+# OmniLoc — Training `main.py`
 
 This project presents a novel LocalizationTransformer, implemented with PyTorch Lightning, for indoor localization using Wi-Fi-derived features such as CSI, RSSI, SNR, and AP vectors. It represents an early effort toward developing a compact foundation model—comparable in scale to GPT-1—trained on real measurement data. 
 
@@ -121,7 +121,7 @@ Optionally pass **`--ckpt path/to/model.ckpt`** or **`--weights path/to/best_mod
 
 ## Citations
 
-If you use this code, the **WiLoc** dataset, or the **UniLoc** model in research, please cite the relevant work(s) below.
+If you use this code, the **WiLoc** dataset, or the **OmniLoc** model in research, please cite the relevant work(s) below.
 
 **WiLoc** (dataset):
 
@@ -134,18 +134,18 @@ If you use this code, the **WiLoc** dataset, or the **UniLoc** model in research
 }
 ```
 
-**UniLoc** (foundation model for anchor-free UE localization):
+**OmniLoc** (foundation model for anchor-free UE localization):
 
 ```bibtex
-@article{chu2026uniloc,
-  title={UniLoc: A Geometry-Aware Foundation Model for Anchor-Free UE Localization Across Diverse Indoor Environments},
+@article{chu2026OmniLoc,
+  title={OmniLoc: A Geometry-Aware Foundation Model for Anchor-Free UE Localization Across Diverse Indoor Environments},
   author={Chu, Lei and Zhang, Yuning and Serbetci, Omer Gokalp and Bassel Abou Ali, Modad and Molisch, Andreas F},
   journal={under review},
   year={2026}
 }
 ```
 
-The second entry uses the key `chu2026uniloc` so it does not duplicate `zhang2026wiloc` in your `.bib` file; you may rename the key to match your bibliography style.
+The second entry uses the key `chu2026OmniLoc` so it does not duplicate `zhang2026wiloc` in your `.bib` file; you may rename the key to match your bibliography style.
 
 ## License
 
